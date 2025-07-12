@@ -1,4 +1,10 @@
-let argv = ["No argument", "Best School Argument found", "Best School Arguments found"];
-argv.forEach((val, index) => {
-    console.log(`${index}: ${val}`);
-});
+const numberOfArguments = process.argv.length - 2;
+
+
+if (numberOfArguments === 0) {
+  console.log("No argument");
+} else if (numberOfArguments === 1) {
+  console.log("Argument found");
+} else {
+  console.log("Arguments found");
+}
